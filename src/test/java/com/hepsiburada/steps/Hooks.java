@@ -18,14 +18,6 @@ public class Hooks {
         basePage.closeApp();
         basePage.launchApp();
 
-/*        GlobalParams params = new GlobalParams();
-        params.initializeGlobalParams();
-
-        ThreadContext.put("ROUTINGKEY", params.getPlatformName() + "_"
-                + params.getDeviceName());
-
-        new ServerManager().startServer();
-        new DriverManager().initializeDriver();*/
         new ScreenRecordingUtils().startRecording();
     }
 
@@ -37,14 +29,5 @@ public class Hooks {
         }
 
         new ScreenRecordingUtils().stopRecording(scenario.getName());
-/*        DriverManager driverManager = new DriverManager();
-        if(driverManager.getDriver() != null){
-            driverManager.getDriver().quit();
-            driverManager.setDriver(null);
-        }
-        ServerManager serverManager = new ServerManager();
-        if(serverManager.getServer() != null){
-            serverManager.getServer().stop();
-        }*/
     }
 }
